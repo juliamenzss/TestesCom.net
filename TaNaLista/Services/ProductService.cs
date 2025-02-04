@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TaNaLista.Interfaces;
+using TaNaLista.Models;
+using TaNaLista.Requests;
 using TaNaLista.Response;
 
 namespace TaNaLista.Services
@@ -29,6 +31,19 @@ namespace TaNaLista.Services
         public async Task<int> GetTotal()
         {
             return await _context.Products.CountAsync();
+        }
+
+        public async Task<Product> Create(ProductCreateRequest request)
+        {
+            var product = new Product
+            {
+                Name = request.Name,
+                Description = request.Description,
+                Price = request.Price
+            };
+            context.Products.Add(product);
+            await context.SaveChangesAsync();
+            return product;
         }
 
     }

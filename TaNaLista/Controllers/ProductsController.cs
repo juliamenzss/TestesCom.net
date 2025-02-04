@@ -112,38 +112,28 @@ namespace TaNaLista.Controllers
         //    }
 
 
-        //    [HttpPost]
-        //    [ProducesResponseType(StatusCodes.Status201Created)]
-        //    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        //    public async Task<IActionResult> PostProduct(Product product)
-        //    {
-        //        try
-        //        {
-        //            var newProduct = new Product
-        //            {
-        //                Name = product.Name,
-        //                Description = product.Description,
-        //                Price = Math.Round(product.Price, 2)
-
-        //            };
-        //            context.Products.Add(product);
-        //            await context.SaveChangesAsync();
-
-        //            return CreatedAtAction("GetProduct", new { id = product.Id }, product);
-        //        }
-
-        //        catch (DbException dbEx)
-        //        {
-        //            logger.LogError(dbEx, "Error in database");
-        //            return BadRequest();
-        //        }
-
-        //        catch (Exception ex)
-        //        {
-        //            logger.LogError(ex, "Error create product");
-        //            return BadRequest();
-        //        }
+        //[HttpPost]
+        //[ProducesResponseType(StatusCodes.Status201Created)]
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
+        //public async Task<IActionResult> PostProduct(Product product)
+        //{
+        //    try
+        //    {   var product = await 
+        //        return CreatedAtAction("GetProduct", new { id = product.Id }, product);
         //    }
+
+        //    catch (DbException dbEx)
+        //    {
+        //        _logger.LogError(dbEx, "Error in database");
+        //        return BadRequest();
+        //    }
+
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError(ex, "Error create product");
+        //        return BadRequest();
+        //    }
+        //}
 
 
 

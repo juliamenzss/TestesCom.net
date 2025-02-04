@@ -1,4 +1,6 @@
-﻿using TaNaLista.Response;
+﻿using TaNaLista.Models;
+using TaNaLista.Requests;
+using TaNaLista.Response;
 
 namespace TaNaLista.Interfaces
 {
@@ -6,5 +8,6 @@ namespace TaNaLista.Interfaces
     {
         Task<IEnumerable<ProductResponse>> GetAll(int page = 1, int pageSize = 10);
         Task<int> GetTotal();
+        Task<Product> Create(ProductCreateRequest request);
     }
 }
